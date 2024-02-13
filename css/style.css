@@ -15,7 +15,7 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #f8333c;
+    --clr-accent: #5ac7a5;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -173,7 +173,7 @@ header {
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h3); 
     text-decoration: none;
 }
 
@@ -211,11 +211,6 @@ header {
 .nav-open .hamburger::after {
     opacity: 0;
 }
-
-
-
-
-
 
 .hamburger {
     display: block;
@@ -290,14 +285,13 @@ header {
 }
 
 
-
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-dark); 
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    background-blend-mode: screen;
     color: var(--clr-light);
     text-align: center;
 }
@@ -405,7 +399,7 @@ header {
         opacity 250ms linear;
 }
 
-.portfolio__item:focus {
+.portfolio__item:focus { /* allows you to tab through images*/
     position: relative;
     z-index: 2;
 }
