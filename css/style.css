@@ -7,23 +7,28 @@
 /* Custom Properties */
 
 :root {
-    --ff-primary: 'Nunito Sans', serif;
-    --ff-secondary: 'Open Sans', serif;
+    /* font-family */
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
     
+    /* font-weight */
     --fw-reg: 300;
-    --fw-bold: 800;
+    --fw-bold: 600;
     
+    /* colors */
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #5ac7a5;
     
+    /* font size */
     --fs-h1: 3rem;
-    --fs-h2: 2.50rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    /* box shaddow */
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 
+          0.125em 0.125em 0.25em rgba(0,0,0,.15); /* creates a layered shadow */
 }
 
 @media (min-width: 800px) {
@@ -37,10 +42,10 @@
 
 /* General styles */
 
-/* endable this to add smooth scrolling */
-/* html {
+/* enable this to add smooth scrolling */
+html {
     scroll-behavior: smooth;
-} */
+} 
 
 
 body {
@@ -53,7 +58,7 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 4em 2em;
 }
 
 img {
@@ -250,15 +255,13 @@ header {
     box-shadow: var(--bs);
 }
 
-.section__subtitle--intro {
-    display: inline-block;
-}
+
 
 @media (min-width: 600px) {
     .intro {
         display: grid;
-        width: min-content;
-        margin: 0 auto;
+        width: min-content; /* shrinks img */
+        margin: 0 auto;     /* matches the size of the content and keeps it centered */ 
         grid-column-gap: 1em;
         grid-template-areas: 
             "img title"
@@ -280,7 +283,7 @@ header {
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        width: calc(100% + 1.5em); /* allows width of 'color bar' to stretch right */
     }
 }
 
@@ -291,7 +294,7 @@ header {
     background-color: var(--clr-dark); 
     background-image: url(../img/services-bg.jpg);
     background-size: cover;
-    background-blend-mode: screen;
+    background-blend-mode: overlay; /* blends the background image by keeping netrals and boosting color contrast */
     color: var(--clr-light);
     text-align: center;
 }
@@ -304,20 +307,20 @@ header {
 .section__title--services::after {
     content: '';
     display: block;
-    width: 2em;
+    width: 4.5em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: currentColor; /* matches color of .section__title--services */
     opacity: 0.25;
 }
 
 .services {
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .service {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: inherit; /* inherits margin of parent - services. Looks better on small screens */
 }
 
 @media (min-width: 800px) {
@@ -329,7 +332,8 @@ header {
     }
     
     .service + .service {
-        margin-left: 2em;
+        margin-left: 4em;
+        
     }
 }
 
@@ -380,7 +384,7 @@ header {
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    text-align: center;    
+    text-align: center;
 }
 
 .portfolio {
