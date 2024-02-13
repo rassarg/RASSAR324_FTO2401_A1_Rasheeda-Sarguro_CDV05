@@ -18,6 +18,7 @@
     /* colors */
     --clr-light: #fff;
     --clr-dark: #303030;
+    --clr-primary: #8b8077;
     --clr-accent: #5ac7a5;
     
     /* font size */
@@ -47,7 +48,6 @@ html {
     scroll-behavior: smooth;
 } 
 
-
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -66,7 +66,12 @@ img {
     max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold) }
+strong {
+    font-weight: var(--fw-bold); 
+    color: var(--clr-primary);
+    letter-spacing: .05em;
+
+}
 
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -113,6 +118,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    
 }
 
 .section__title--intro strong {
@@ -125,7 +131,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about {  /* I was trying to make the bar extend further right, but couldn't get it to no matter what I did with the padding */
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -337,6 +343,7 @@ header {
     }
 }
 
+/* About Me section */
 
 .about-me {
     max-width: 1000px;
@@ -350,7 +357,7 @@ header {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr 300px;
         grid-template-areas: 
             "title img"
             "subtitle img"
