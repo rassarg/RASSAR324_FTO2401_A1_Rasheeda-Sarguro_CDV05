@@ -70,7 +70,7 @@ strong { font-weight: var(--fw-bold) }
 
 :focus {
     outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
+    outline-offset: 3px; /* creates outline on anything thats focused on (links and button)*/
 }
 
 /* Buttons */
@@ -84,7 +84,7 @@ strong { font-weight: var(--fw-bold) }
     cursor: pointer;
     font-size: .8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
 }
