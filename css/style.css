@@ -17,9 +17,9 @@
     
     /* colors */
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-primary: #8b8077;
-    --clr-accent: #5ac7a5;
+    --clr-dark: #2f2729;
+    --clr-accent: #FFBE98;
+    --clr-primary: #009577;
     
     /* font size */
     --fs-h1: 3rem;
@@ -32,7 +32,7 @@
           0.125em 0.125em 0.25em rgba(0,0,0,.15); /* creates a layered shadow */
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -58,7 +58,7 @@ body {
 }
 
 section {
-    padding: 4em 2em;
+    padding: 5em 2em;
 }
 
 img {
@@ -74,7 +74,7 @@ strong {
 }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-primary);
     outline-offset: 3px; /* creates outline on anything thats focused on (links and button)*/
 }
 
@@ -131,7 +131,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {  /* I was trying to make the bar extend further right, but couldn't get it to no matter what I did with the padding */
+.section__subtitle--about {  
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -139,7 +139,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
+    color: var(--clr-light);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
@@ -165,7 +165,6 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -261,9 +260,11 @@ header {
     box-shadow: var(--bs);
 }
 
+.section__subtitle--intro {
+    display: inline-block;
+}
 
-
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .intro {
         display: grid;
         width: min-content; /* shrinks img */
@@ -281,7 +282,7 @@ header {
         position: relative;
         z-index: 2;
     }    
-    
+
     .section__subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -313,7 +314,7 @@ header {
 .section__title--services::after {
     content: '';
     display: block;
-    width: 4.5em;
+    width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: currentColor; /* matches color of .section__title--services */
@@ -321,12 +322,12 @@ header {
 }
 
 .services {
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 .service {
-    max-width: 600px;
-    margin: inherit; /* inherits margin of parent - services. Looks better on small screens */
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 @media (min-width: 800px) {
@@ -338,7 +339,7 @@ header {
     }
     
     .service + .service {
-        margin-left: 4em;
+        margin-left: 2em;
         
     }
 }
@@ -357,7 +358,7 @@ header {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 1fr 200px;
         grid-template-areas: 
             "title img"
             "subtitle img"
@@ -374,9 +375,9 @@ header {
         grid-row: 2;
         position: relative;
         left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
+        width: calc(100% + 2.5em);
+        padding-left: 0.5em;
+        padding-right: calc(200px + 3em);
     }
     
     .about-me__img {
@@ -390,13 +391,14 @@ header {
 
 .my-work {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
+    color: var(--clr-accent);
     text-align: center;
 }
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
 }
 
 .portfolio__item {
@@ -404,7 +406,7 @@ header {
     overflow: hidden;
 }
 
-.portfolio__img {
+.portfolio__img { /* Hover effects on imgs */
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
