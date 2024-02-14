@@ -403,7 +403,7 @@ header {
 
 .portfolio__item {
     background: var(--clr-accent);
-    overflow: hidden;
+    overflow: hidden; /* prevents the image from going over the box shape when hovered over */
 }
 
 .portfolio__img { /* Hover effects on imgs */
