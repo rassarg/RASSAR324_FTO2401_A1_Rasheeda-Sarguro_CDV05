@@ -8,12 +8,12 @@
 
 :root {
     /* font-family */
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Inter", sans-serif;
     
     /* font-weight */
-    --fw-reg: 300;
-    --fw-bold: 600;
+    --fw-reg: 400;
+    --fw-bold: 800;
     
     /* colors */
     --clr-light: #fff;
