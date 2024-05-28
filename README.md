@@ -1,6 +1,7 @@
 # DEVELOPER PORTFOLIO WEBSITE
 
-    A simple developer portfolio website that showcases my projects, skills, and contact information.
+    A simple developer portfolio website that
+    showcases my projects, skills, and contact information.
 
 ## Run
 
