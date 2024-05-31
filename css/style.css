@@ -410,6 +410,10 @@ header {
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden; /* prevents the image from going over the box shape when hovered over */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .portfolio__img {
